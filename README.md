@@ -5,7 +5,7 @@
 
 > Upload raw security logs. Get AI-powered incident triage in seconds.
 
-ThreatHunter AI is a browser-based Security Operations Center (SOC) triage platform that ingests raw log files, runs them through a 40-rule detection engine, correlates findings into structured incidents, and uses the **Anthropic Claude API** to generate expert-level triage reports — all without a backend server.
+ThreatHunter AI is a browser-based Security Operations Center (SOC) triage platform that ingests raw log files, runs them through a 40-rule detection engine, correlates findings into structured incidents, and uses the **Anthropic Claude API** to generate expert-level triage reports, all without a backend server.
 
 ---
 
@@ -26,7 +26,7 @@ ThreatHunter AI is a browser-based Security Operations Center (SOC) triage platf
 
 ## Overview
 
-Traditional SIEM tools require complex infrastructure, expensive licenses, and dedicated engineers to operate. ThreatHunter AI takes a different approach — drop your log files in, and within seconds you get:
+Traditional SIEM tools require complex infrastructure, expensive licenses, and dedicated engineers to operate. ThreatHunter AI takes a different approach, drop your log files in, and within seconds you get:
 
 - Structured incidents with severity ratings
 - Full attack chain narratives
@@ -36,7 +36,7 @@ Traditional SIEM tools require complex infrastructure, expensive licenses, and d
 
 It runs entirely in the browser as a React application with no database, no server, and no persistent storage.
 
-![Upload Screen](images/upload.png)
+![Upload Screen](Upload.jpeg)
 
 ---
 
@@ -221,7 +221,7 @@ To stay within the 200k token limit, the prompt is kept lean:
 ```
 
 ### Fallback
-If the API is unavailable, a **heuristic triage** function computes a local score from severity weights, detection count, and confidence values — keeping the platform functional offline.
+If the API is unavailable, a **heuristic triage** function computes a local score from severity weights, detection count, and confidence values, keeping the platform functional offline.
 
 ---
 
@@ -279,11 +279,11 @@ All state lives in React memory for the duration of the session. Refreshing the 
 
 ## Setup & Deployment
 
-ThreatHunter AI is built to run as a **Claude.ai artifact** — no installation required.
+ThreatHunter AI is built to run as a **Claude.ai artifact**, no installation required.
 
 ### Running in Claude.ai
 1. Open the artifact in any Claude.ai conversation
-2. The Anthropic API is automatically available — no API key configuration needed
+2. The Anthropic API is automatically available, no API key configuration needed
 3. Upload log files and analyze immediately
 
 ### Running Outside Claude.ai (optional)
@@ -339,7 +339,7 @@ export default {
 
 ### Step 1 — Upload Log Files
 
-![Upload Interface](images/upload_screen.png)
+![Upload Interface](Upload.jpeg)
 
 Drag and drop one or more supported log files onto the upload zone, or click to browse. Multiple files can be queued and processed together. Supported formats are shown on the upload screen.
 
@@ -349,7 +349,7 @@ Click **⚡ Analyze Logs** to begin processing.
 
 ### Step 2 — Detection & Correlation
 
-![Processing](images/processing.png)
+![Processing](processing.jpeg)
 
 The engine processes every log entry through all 40 rules simultaneously. Stateful counters track patterns across the full file. Progress is shown in real time:
 
@@ -364,7 +364,7 @@ Found 7 incident(s). Running AI triage…
 
 ### Step 3 — Review Incidents
 
-![Incident List](images/incident_list.png)
+![Incident List](Dashboard.jpeg)
 
 Incidents appear in the left panel sorted by severity (CRITICAL → HIGH → MEDIUM → LOW). Each entry shows:
 - Unique incident ID
@@ -379,7 +379,7 @@ Use the filter bar to view incidents by severity or triage status.
 
 ### Step 4 — AI Triage Analysis
 
-![Triage Analysis](images/triage_analysis.png)
+![Triage Analysis](Analysis.jpeg)
 
 Click any incident to open the full triage view. The **Triage Analysis** tab shows:
 
@@ -397,7 +397,7 @@ Click any incident to open the full triage view. The **Triage Analysis** tab sho
 
 ### Step 5 — Raw Detections
 
-![Raw Detections](images/raw_detections.png)
+![Raw Detections](Anal.jpeg)
 
 Switch to the **Raw Detections** tab to inspect every individual rule that fired within the incident:
 - Rule ID and name
@@ -417,7 +417,7 @@ Any incident can be re-triaged at any time by clicking **re-triage** in the inci
 
 ### Dashboard Stats (Right Rail)
 
-![Dashboard Stats](images/stats.png)
+![Dashboard Stats](Dashboard.jpeg)
 
 The right rail shows live statistics as triage completes:
 - **Severity breakdown** — bar chart of incidents per severity level
@@ -461,4 +461,4 @@ MIT — Free to use, modify, and distribute.
 
 ## Acknowledgements
 
-Built with [Claude](https://claude.ai) by Anthropic · Detection rules based on MITRE ATT&CK framework · Suricata EVE format by the Suricata project
+Detection rules based on MITRE ATT&CK framework · Suricata EVE format by the Suricata project
