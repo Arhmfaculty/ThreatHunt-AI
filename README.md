@@ -1,7 +1,7 @@
 # ⚡ ThreatHunter AI
 ### Real-Time SOC Triage Platform powered by Claude AI
 
-![ThreatHunter Dashboard](images/dashboard.png)
+![ThreatHunter Dashboard](Dashboard.jpeg)
 
 > Upload raw security logs. Get AI-powered incident triage in seconds.
 
